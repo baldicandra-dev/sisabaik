@@ -11,11 +11,12 @@ content="Formulir prototipe untuk mendaftarkan usaha sebagai penyedia makanan di
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a href="#konten-utama">Lewati ke konten utama</a>
-<header>
-<p><strong>SisaBaik</strong></p>
+<a class="skip-link" href="#konten-utama">Lewati ke konten utama</a>
+<header class="site-header">
+<div class="container header-layout">
+<p class="brand">SisaBaik</p>
 <nav aria-label="Navigasi utama">
-<ul>
+<ul class="nav-list">
 <li><a href="index.html">Beranda</a></li>
 <li>
 <a href="daftar-penyedia.html" aria-current="page">
@@ -25,20 +26,24 @@ Daftar sebagai penyedia
 <li><a href="tawarkan-makanan.html">Tawarkan makanan</a></li>
 </ul>
 </nav>
+</div>
 </header>
-<main id="konten-utama" tabindex="-1">
+<main class="container" id="konten-utama" tabindex="-1">
+<div class="page-heading">
 <h1>Daftar sebagai penyedia SisaBaik</h1>
-<p>
-Gunakan data fiktif selama praktikum. Formulir ini belum terhubung ke
+<p class="lead">
+    Gunakan data fiktif selama praktikum. Formulir ini belum terhubung ke
 server dan basis data.
 </p>
-<p id="petunjuk-wajib">Kolom bertanda <strong>*</strong> wajib diisi.</p>
+<p class="required-note" id="petunjuk-wajib">Kolom bertanda <strong>*</strong> wajib diisi.</p>
+</div>
 <form
+class="form-card"
 action="daftar-penyedia.html"
 method="get"
 aria-describedby="petunjuk-wajib"
 >
-<fieldset>
+<fieldset class="form-section">
 <legend>Informasi usaha</legend>
 <p>
 <label for="nama-usaha">Nama usaha *</label><br>
@@ -78,7 +83,7 @@ Jelaskan jenis produk dan jam operasional, maksimal 500 karakter.
 </small>
 </p>
 </fieldset>
-<fieldset>
+<fieldset class="form-section">
 <legend>Penanggung jawab</legend>
 <p>
 <label for="nama-penanggung-jawab">Nama lengkap *</label><br>
@@ -122,10 +127,10 @@ Gunakan 8–20 karakter berupa angka, spasi, +, atau tanda kurung.
 </small>
 </p>
 </fieldset>
-<fieldset>
+<fieldset class="form-section">
 <legend>Lokasi usaha</legend>
 <p>
-<label for="alamat">Alamat lengkap *</label><br>
+    <label for="alamat">Alamat lengkap *</label><br>
 <textarea
 id="alamat"
 name="alamat"
@@ -173,7 +178,7 @@ required
 <small id="bantuan-kode-pos">Masukkan tepat lima digit.</small>
 </p>
 </fieldset>
-<fieldset>
+<fieldset class="form-section">
 <legend>Persetujuan</legend>
 <p>
 <input
@@ -189,12 +194,12 @@ data pribadi atau data usaha yang sebenarnya. *
 </label>
 </p>
 </fieldset>
-<p>
-<button type="submit">Kirim pendaftaran latihan</button>
-<button type="reset">Kosongkan formulir</button>
+<p class="form-actions">
+<button class="button" type="submit">Kirim pendaftaran latihan</button>
+<button class="button button-secondary" type="reset">Kosongkan formulir</button>
 </p>
 </form>
-<section aria-labelledby="catatan-prototipe">
+<section class="section" aria-labelledby="catatan-prototipe">
 <h2 id="catatan-prototipe">Apa yang terjadi setelah tombol dikirim?</h2>
 <p>
 Browser memeriksa atribut validasi HTML terlebih dahulu. Jika semua
@@ -204,8 +209,10 @@ metode sementara ini akan diganti dengan pengiriman ke server.
 </p>
 </section>
 </main>
-<footer>
-<p>&copy ; 2026 SisaBaik — Proyek pembelajaran Pengembangan Web.</p>
+<footer class="site-footer">
+<div class="container footer-layout">
+<p>&copy; 2026 SisaBaik — Proyek pembelajaran Pengembangan Web.</p>
+</div>
 </footer>
 </body>
 </html>
